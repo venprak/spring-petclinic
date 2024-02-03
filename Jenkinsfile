@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment{
-        PATH = "$PATH:c:\\Users\\venpr\\code\\spring-petclinic"
-	M2_HOME = "c:\\Users\\venpr\\code\\spring-petclinic"
-        JAVA_HOME="C:\\Program Files\\Common Files\\Oracle\\Java"
+        PATH = "C:\\Program Files\\Git\\bin:$PATH:c:\\Users\\venpr\\code\\spring-petclinic"
+	M2_HOME = "C:\\Users\\venpr\\code\\spring-petclinic"
+        JAVA_HOME="C:\\Program Files\\java\\jdk-17"
     }
     stages {
         stage("Maven Build") {
@@ -13,7 +13,7 @@ pipeline {
                 echo "PATH = ${PATH}"
                 echo "M2_HOME = ${M2_HOME}"
                  
-		bat 'mvnw  clean package'
+		bat 'bash mvnw clean package'
             
 
 	          }     

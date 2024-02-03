@@ -12,10 +12,8 @@ pipeline {
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 '''
-	    withMaven(globalMavenSettingsConfig: '', jdk: '', maven: '', mavenSettingsConfig: '', traceability: true) {
-			sh 'mvn package'
+		sh 'mvn  clean package'
             
-                      }
 
 	          }     
              }

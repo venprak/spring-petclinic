@@ -9,7 +9,7 @@ pipeline {
         stage("Maven Build") {
             steps {
                 echo "PATH = ${PATH}"
-                echo "M2_HOME = ${M2_HOME}"
+              //  echo "M2_HOME = ${M2_HOME}"
 		sh 'mvnw clean package'
 
 	          }     

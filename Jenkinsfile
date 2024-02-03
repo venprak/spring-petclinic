@@ -12,7 +12,7 @@ pipeline {
 	   
                 echo "PATH = ${PATH}"
                 echo "M2_HOME = ${M2_HOME}"
-                 
+                bat 'sh chmod +x mvnw'
 		bat 'bash mvnw clean package'
             
 

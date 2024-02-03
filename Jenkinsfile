@@ -8,11 +8,11 @@ pipeline {
         stage("Maven Build") {
             steps {
 
-	/*    sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                ''' */
-		sh 'mvn  clean package'
+	   
+                echo "PATH = ${PATH}"
+                echo "M2_HOME = ${M2_HOME}"
+                 
+		bat 'mvnw  clean package'
             
 
 	          }     
